@@ -12,11 +12,15 @@
     </section>
 </footer>
 
+<!-- javascript 영역에서 타임리프를 적용 / 해석 함 -->
+<script th:inline="javascript">
 	
-<script>
-	// EL/JSTL 구문이 먼저 해석
-	// 문자열의 경우 따옴표가 없는 상태이니 옆에 붙여줘야함.
-	// alert('${message}') // ${message}
+	/* Natural Template */
+	const message = /*[[${message}]]*/ "전달 받은 메세지";
+	// 타임리프 해석 	값(자료형 알아서 해석)	사라짐(설명)
+
+	if(message != null) alert(message);
+	
 </script>
 	
 
